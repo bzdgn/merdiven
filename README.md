@@ -8,7 +8,7 @@ TOC
  0 Introduction
 ---------------
 
-![merdiven-logo](https://github.com/bzdgn/merdiven/blob/master/misc/merdiven.bmp)
+![merdiven-logo](https://github.com/bzdgn/merdiven/blob/main/misc/merdiven.bmp)
 
 **Merdiven** is a simple generic statement builder for generic purposes. During different development projects, there was the need to have a generic statement builder that produces immutable statements thus I've created this open-source project.
 
