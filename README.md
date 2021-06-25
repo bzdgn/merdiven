@@ -19,7 +19,15 @@ TOC
  1 Setup
 --------
 
-Currently, the only way to add **merdiven** to your project is adding the jar file to your build path. As planned, soon **merdiven** will be published in maven repository.
+You can simply add **merdiven** to your project as a maven dependency;
+
+```xml
+<dependency>
+    <groupId>io.github.bzdgn</groupId>
+    <artifactId>merdiven</artifactId>
+    <version>0.0.1</version>
+</dependency>
+```
 
 
 [Go back to TOC](#toc)
