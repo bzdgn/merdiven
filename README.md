@@ -10,6 +10,8 @@ TOC
 
 ![merdiven-logo](https://github.com/bzdgn/merdiven/blob/main/misc/merdiven.bmp)
 
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.bzdgn/merdiven.svg)](https://search.maven.org/artifact/io.github.bzdgn/merdiven)
+
 **Merdiven** is a simple generic statement builder for generic purposes. During different development projects, there was the need to have a generic statement builder that produces immutable statements thus I've created this open-source project.
 
 
