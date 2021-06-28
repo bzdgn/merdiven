@@ -5,18 +5,22 @@ import io.github.bzdgn.merdiven.statement.StatementType;
 
 public abstract class OperationStatement extends BaseStatement {
 	
-	private final Operation operation;
-
-	public OperationStatement(Operation operation) {
+	private final OperationType operation;
+	protected String value;
+	
+	public OperationStatement(OperationType operation, String value) {
 		super(StatementType.OPERATION);
 		this.operation = operation;
+		this.value = value;
 	}
 	
-	public Operation getOperation() {
+	public OperationType getOperation() {
 		return operation;
 	}
 	
 	@Override
-	public abstract String toString();
+	public String toString() {
+		return this.value;
+	}
 	
 }

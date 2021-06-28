@@ -1,0 +1,45 @@
+package io.github.bzdgn.merdiven.statement.data.impl;
+
+import io.github.bzdgn.merdiven.statement.data.DataStatement;
+import io.github.bzdgn.merdiven.statement.data.DataType;
+import io.github.bzdgn.merdiven.statement.data.wrapper.WrapperFactory;
+import io.github.bzdgn.merdiven.statement.data.wrapper.WrapperType;
+
+class PlainAssignmentDataStatement extends DataStatement {
+	
+	private static final String DEFAULT_EQUALS_OPERATOR = "=";
+	
+	public PlainAssignmentDataStatement(String paramName, String paramValue) {
+		super(paramName, paramValue, DEFAULT_EQUALS_OPERATOR, DataType.PLAIN_ASSIGNMENT_DATA);
+	}
+	
+	public PlainAssignmentDataStatement(String paramName, String paramValue, String operator) {
+		super(paramName, paramValue, getOperator(operator, DEFAULT_EQUALS_OPERATOR), DataType.PLAIN_ASSIGNMENT_DATA);
+	}
+	
+	public PlainAssignmentDataStatement(String paramName, String paramValue, String operator, String wrapper) {
+		super(paramName, paramValue, getOperator(operator, DEFAULT_EQUALS_OPERATOR), WrapperFactory.getPlainStringWrapper(wrapper), DataType.PLAIN_ASSIGNMENT_DATA);
+	}
+	
+	public PlainAssignmentDataStatement(String paramName, String paramValue, String operator, String paramWrapper, String valueWrapper) {
+		super(paramName, paramValue, getOperator(operator, DEFAULT_EQUALS_OPERATOR), WrapperFactory.getPlainStringWrapper(paramWrapper), WrapperFactory.getPlainStringWrapper(valueWrapper), DataType.PLAIN_ASSIGNMENT_DATA);
+	}
+	
+	public PlainAssignmentDataStatement(String paramName, String paramValue, String operator, WrapperType wrapperType) {
+		super(paramName, paramValue, getOperator(operator, DEFAULT_EQUALS_OPERATOR), WrapperFactory.getPredefinedWrapper(wrapperType), DataType.PLAIN_ASSIGNMENT_DATA);
+	}
+	
+	public PlainAssignmentDataStatement(String paramName, String paramValue, String operator, WrapperType paramWrapperType, WrapperType valueWrapperType) {
+		super(paramName, paramValue, getOperator(operator, DEFAULT_EQUALS_OPERATOR), WrapperFactory.getPredefinedWrapper(paramWrapperType), WrapperFactory.getPredefinedWrapper(valueWrapperType), DataType.PLAIN_ASSIGNMENT_DATA);
+	}
+	
+	public PlainAssignmentDataStatement(String paramName, String paramValue, WrapperType wrapperType) {
+		super(paramName, paramValue, DEFAULT_EQUALS_OPERATOR, WrapperFactory.getPredefinedWrapper(wrapperType), DataType.PLAIN_ASSIGNMENT_DATA);
+	}
+	
+	public PlainAssignmentDataStatement(String paramName, String paramValue, WrapperType paramWrapperType, WrapperType valueWrapperType) {
+		super(paramName, paramValue, DEFAULT_EQUALS_OPERATOR, WrapperFactory.getPredefinedWrapper(paramWrapperType), WrapperFactory.getPredefinedWrapper(valueWrapperType), DataType.PLAIN_ASSIGNMENT_DATA);
+	}
+	
+
+}
