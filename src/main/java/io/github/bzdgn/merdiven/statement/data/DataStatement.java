@@ -29,13 +29,14 @@ public class DataStatement extends BaseStatement {
 	}
 	
 	public DataStatement(String paramName, String paramValue, String operator, Wrapper wrapper, DataType dataStatementType) {
-		super(StatementType.SIMPLE_DATA);
-		this.paramName = paramName;
-		this.paramValue = paramValue;
-		this.operator = operator;
-		this.paramWrapper = wrapper;
-		this.valueWrapper = wrapper;
-		this.dataStatementType = dataStatementType;
+		this(
+			paramName,
+			paramValue, 
+			operator,
+			wrapper,
+			wrapper,
+			dataStatementType
+		);
 	}
 	
 	public DataStatement(String paramName, String paramValue, String operator, Wrapper paramWrapper, Wrapper valueWrapper, DataType dataStatementType) {
