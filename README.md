@@ -127,8 +127,9 @@ firstName="Levent" and lastName="Divilioglu" number="717" github="bzdgn" [ type=
  3 TODO List
 ------------
 
-- Field to list structure will be added.
+- Field to list structure to be added.
 - Configuration object to be implemented for generic templates
+- Pretty Print functionality to be added
 
 
 [Go back to TOC](#toc)
