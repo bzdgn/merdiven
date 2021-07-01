@@ -72,7 +72,8 @@ System.out.println(statement.toString());
 
 And the output will be as follows;
 
-```[ { "name":"Levent" , "id":"717" , "isOccupied":"true" , "info" : { "languages" : [ "english" , "turkish" , "dutch" ] } } ]
+```
+[ { "name":"Levent" , "id":"717" , "isOccupied":"true" , "info" : { "languages" : [ "english" , "turkish" , "dutch" ] } } ]
 ```
 
 Pretty printed output will be;
