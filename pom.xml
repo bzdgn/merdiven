@@ -5,7 +5,7 @@
 	<groupId>io.github.bzdgn</groupId>
 	<artifactId>merdiven</artifactId>
 	<packaging>jar</packaging>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<name>merdiven</name>
 	<url>https://github.com/bzdgn/merdiven</url>
 	<description>

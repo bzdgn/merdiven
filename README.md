@@ -28,7 +28,7 @@ You can simply add **merdiven** to your project as a maven dependency;
 <dependency>
     <groupId>io.github.bzdgn</groupId>
     <artifactId>merdiven</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
 </dependency>
 ```
 
