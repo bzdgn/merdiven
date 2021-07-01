@@ -16,9 +16,16 @@
 		<developer>
 			<id>bzdgn</id>
 			<name>Levent Divilioglu</name>
-			<url>https://stackoverflow.com/users/3128926/levent-divilioglu</url>
+			<url>https://github.com/bzdgn</url>
 		</developer>
 	</developers>
+
+	<contributors>
+		<contributor>
+			<name>Kerem Ispirli</name>
+			<url>https://github.com/keremispirli</url>
+		</contributor>
+	</contributors>
 
 	<scm>
 		<connection>scm:git:ssh://git@github.com/bzdgn/merdiven.git</connection>
