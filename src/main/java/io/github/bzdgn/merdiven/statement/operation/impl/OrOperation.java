@@ -1,17 +1,18 @@
 package io.github.bzdgn.merdiven.statement.operation.impl;
 
-import io.github.bzdgn.merdiven.statement.operation.Operation;
+import io.github.bzdgn.merdiven.statement.operation.OperationType;
 import io.github.bzdgn.merdiven.statement.operation.OperationStatement;
 
 class OrOperation extends OperationStatement {
 	
+	private static final String DEFAULT_VALUE = "or";
+	
 	public OrOperation() {
-		super(Operation.OR);
+		super(OperationType.OR, DEFAULT_VALUE);
 	}
-
-	@Override
-	public String toString() {
-		return "or";
+	
+	public OrOperation(String customValue) {
+		super(OperationType.OR, customValue);
 	}
 
 }

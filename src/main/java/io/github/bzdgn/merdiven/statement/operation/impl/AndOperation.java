@@ -1,17 +1,18 @@
 package io.github.bzdgn.merdiven.statement.operation.impl;
 
-import io.github.bzdgn.merdiven.statement.operation.Operation;
+import io.github.bzdgn.merdiven.statement.operation.OperationType;
 import io.github.bzdgn.merdiven.statement.operation.OperationStatement;
 
 class AndOperation extends OperationStatement {
 	
+	private static final String DEFAULT_VALUE = "and";
+	
 	public AndOperation() {
-		super(Operation.AND);
+		super(OperationType.AND, DEFAULT_VALUE);
 	}
-
-	@Override
-	public String toString() {
-		return "and";
+	
+	public AndOperation(String customValue) {
+		super(OperationType.AND, customValue);
 	}
 
 }
