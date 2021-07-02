@@ -1,6 +1,7 @@
 package io.github.bzdgn.merdiven;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import io.github.bzdgn.merdiven.statement.BaseStatement;
@@ -13,13 +14,16 @@ import io.github.bzdgn.merdiven.statement.operation.impl.OperationFactory;
 public class Statement {
 
 	private final List<BaseStatement> statements;
+	private final boolean prettyPrint;
 
 	public Statement(StatementBuilder queryBuilder) {
 		this.statements = queryBuilder.statements;
+		this.prettyPrint = queryBuilder.prettyPrint;
 	}
 
 	public static class StatementBuilder {
 		private List<BaseStatement> statements;
+		private boolean prettyPrint;
 
 		public StatementBuilder() {
 			statements = new ArrayList<>();
@@ -629,6 +633,12 @@ public class Statement {
 
 			return this;
 		}
+		
+		public StatementBuilder prettyPrint(boolean prettyPrint) {
+			this.prettyPrint = prettyPrint;
+			
+			return this;
+		}
 
 		public Statement build() {
 			return new Statement(this);
@@ -638,20 +648,9 @@ public class Statement {
 
 	@Override
 	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		int statementSize = statements.size();
-		int i = 0;
+		List<BaseStatement> unmodifiableList = Collections.unmodifiableList(statements);
 		
-		for (BaseStatement statement : statements) {
-			builder.append(statement.toString());
-			i++;
-			
-			if (i < statementSize) {
-				builder.append(" ");
-			}
-		}
-
-		return builder.toString();
+		return StatementSerializer.serialize(unmodifiableList);
 	}
 
 }
